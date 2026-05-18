@@ -19,14 +19,37 @@ def fallback():
 def chatbot_response(user_input):
     user_input = user_input.lower().strip()
 
-    if user_input in[ "hello","hi","hey"]:
-        return greet()
+        # Greetings
+    if user_input in ["hello", "hi", "hey"]:
+        return "Hi! How can I help you?"
 
-    elif user_input == "how are you":
-        return how_are_you()
+    # Personal questions
+    elif user_input in ["how are you", "how are you doing"]:
+        return "I'm fine, thanks! What about you?"
 
-    elif user_input == "bye":
-        return goodbye()
+    elif user_input in ["what is your name", "your name", "who are you"]:
+        return "My name is BasicBot."
+
+    elif user_input in ["what are you doing", "what are you up to"]:
+        return "I'm chatting with you."
+
+    elif user_input in ["what about you", "tell me about yourself"]:
+        return "I am a simple Python rule-based chatbot."
+
+    # Time and date
+    elif user_input == "what is the time":
+        return "Sorry, I cannot check real time yet."
+
+    elif user_input == "what is today's date":
+        return "Sorry, I cannot check today's date yet."
+
+        # Thank you
+    elif user_input in ["thanks", "thank you"]:
+        return "You're welcome!"
+
+    # Goodbye
+    elif user_input in ["bye", "goodbye"]:
+        return "Goodbye! Have a nice day."
 
     else:
         return fallback()
