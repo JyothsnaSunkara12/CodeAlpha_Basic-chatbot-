@@ -19,7 +19,7 @@ def fallback():
 def chatbot_response(user_input):
     user_input = user_input.lower().strip()
 
-    if user_input == "hello":
+    if user_input in[ "hello","hi","hey"]:
         return greet()
 
     elif user_input == "how are you":
