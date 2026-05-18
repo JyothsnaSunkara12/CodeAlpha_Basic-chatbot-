@@ -33,7 +33,8 @@ def chatbot_response(user_input):
 
 
 def run_chatbot():
-    print("Basic Chatbot (type 'bye' to exit)\n")
+    print("Basic Chatbot (type 'bye' to exit)\n
+(Use formal text.)\n"
 
     while True:
         user_input = input("You: ")
